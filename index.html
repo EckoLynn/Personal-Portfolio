@@ -1,9 +1,98 @@
 <!DOCTYPE html>
-<html> <link rel="stylesheet" href= "./assets/css/style.css">
+<html> <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Web Designs')">Web Design</button>
+  <button class="tablinks" onclick="openCity(event, 'Career Goals')">Career Goals</button>
+  <button class="tablinks" onclick="openCity(event, 'Github')">Github</button>
+  <button class="tablinks" onclick="openCity"(event, 'Education')">Education</button>
+</div>
+
+<div id="Web Designs" class="tabcontent">
+  <h3>Web Designs</h3>
+  <p>Here is some of the projects I have done so far in Coding Bootcamp.</p>
+  <a href="https://lernantino.github.io/run-buddy/">Visit Run-buddy</a>
+  <a href="https://github.com/EckoLynn/run-buddy">GitHub URL</a>
+</div>
+
+<div id="Career Goals" class="tabcontent">
+  <h3>Career Goals</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Github" class="tabcontent">
+  <h3>Github</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Education" class="tabcontent">
+  <h3>Education</h3>
+  <p></p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+  <link rel="stylesheet" href= "./assets/css/style.css">
 <body>
 <h1>Ecko.IO</h1>
 
-<p>Hello! My name is Ecko Browder, and I am becoming a Full Stack Web Devloper.</p>
+<p>Hello! My name is Ecko Browder. I am a current student at UNCC in the Coding Bootcamp. I become interested in coding when i relaized how much impact it has in our world today. I studied international business at CPCC and also studied to be an esthetican and became licsensed this past year.</p>
+<p>My interests include, spending time with my amazing husband and my wonderful son, he is three years old! I have three dogs and we all love to travel as often as we can.</p>
 <img src= "./images/web-image1.jpeg" alt="" />
 <header>
     <h1>Lauguages I Speak</h1>
@@ -12,30 +101,12 @@
         <li>CSS</li>
         <li>JAVA SCRIPT</li>
     </ul>
-    <img src= "./images/BG2.gif" alt="" />
+   
 </header>
-<footer>
-    <div class="container">
-        <form action="action_page.php">
-      
-          <label for="fname">First name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="usa">USA</option>
-          </select>
-      
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-      
-        </form>
-      </div>
-</footer>
+
+
+</body>
+</html> 
+
 </body>
 </html>
